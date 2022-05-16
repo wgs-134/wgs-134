@@ -1,7 +1,7 @@
 package com.Ching.model;
 
 /**
- * ÓÃ»§Àà
+ * ï¿½Ã»ï¿½ï¿½ï¿½
  * 
  * 
  */
@@ -9,11 +9,11 @@ package com.Ching.model;
 
 public class User {
 	
-	Integer User_Id;    //ÓÃ»§±àºÅ
-	String  User_Name;  //ÓÃ»§Ãû
-	Integer User_Type;  //ÓÃ»§ÀàĞÍ
-	String  password;   //ÓÃ»§ÃÜÂë
-	
+	Integer User_Id;    //ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
+	String  User_Name;  //ï¿½Ã»ï¿½ï¿½ï¿½
+	Integer User_Type;  //ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+	String  password;   //ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½
+
 	public User () {
 		super();
 		

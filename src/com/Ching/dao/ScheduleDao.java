@@ -11,19 +11,19 @@ import com.Ching.model.Schedule;
 public class ScheduleDao {
 
 	
-	//Ìí¼Ó
+	//ï¿½ï¿½ï¿½
 			public int add(Connection con,Schedule schedule) throws Exception{
+
 				
-				
-				//sqlÓï¾ä
-				//String sql_1="select * from freelance where Free_Id=?";//²éÑ¯±àºÅÊÇ·ñ´æÔÚ
+				//sqlï¿½ï¿½ï¿½
+				//String sql_1="select * from freelance where Free_Id=?";//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½Ç·ï¿½ï¿½ï¿½ï¿½
 				//PreparedStatement pstmt1 = con.prepareStatement(sql_1);
 				
 				//pstmt1.setString(1, freelance.getFree_Id());
-				//ResultSet rs1 = pstmt1.executeQuery();//²éÑ¯½á¹û	
+				//ResultSet rs1 = pstmt1.executeQuery();//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½	
 				
 					
-				String sql_2 = "insert into schedule values(?,?,?)";//²åÈëÓï¾ä
+				String sql_2 = "insert into schedule values(?,?,?)";//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 				PreparedStatement pstmt2 = con.prepareStatement(sql_2);
 				
 				pstmt2.setString(1, schedule.getSch_Id());
@@ -36,7 +36,7 @@ public class ScheduleDao {
 				
 			}
 			
-			//²éÑ¯
+			//ï¿½ï¿½Ñ¯
 			public ResultSet list(Connection con,Schedule schedule)throws Exception {
 				StringBuffer sb = new StringBuffer("select * from schedule");
 				
@@ -51,7 +51,7 @@ public class ScheduleDao {
 			}
 	
 	
-			//É¾³ý
+			//É¾ï¿½ï¿½
 			public int delete(Connection con,String Sch_Id) throws Exception{
 				String sql="delete from schedule where Sch_Id=?";
 						PreparedStatement pstm=con.prepareStatement(sql);
@@ -62,7 +62,7 @@ public class ScheduleDao {
 		
 		
 		
-		//ÐÞ¸Ä
+		//ï¿½Þ¸ï¿½
 		public int update(Connection con,Schedule schedule)throws Exception {
 			String sql="update schedule set Sch_Id=?,Sch_Free_Id=?,Sch_Time=?where Sch_Id=?";
 			PreparedStatement pstm=con.prepareStatement(sql);

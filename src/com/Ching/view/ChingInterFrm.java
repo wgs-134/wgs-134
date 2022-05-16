@@ -44,7 +44,7 @@ public class ChingInterFrm extends JInternalFrame {
 		lblNewLabel.setIcon(new ImageIcon(ChingInterFrm.class.getResource("/images/\u6E56\u4EBA (1).png")));
 		
 		JLabel lblNewLabel_1 = new JLabel("Kobe Bryant");
-		lblNewLabel_1.setFont(new Font("ËÎÌå", Font.PLAIN, 24));
+		lblNewLabel_1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.PLAIN, 24));
 		GroupLayout groupLayout = new GroupLayout(getContentPane());
 		groupLayout.setHorizontalGroup(
 			groupLayout.createParallelGroup(Alignment.LEADING)

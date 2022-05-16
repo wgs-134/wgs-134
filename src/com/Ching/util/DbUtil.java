@@ -33,12 +33,12 @@ public class DbUtil {
 		DbUtil dbUtil = new DbUtil();
 		try {
 			dbUtil.getCon();
-			System.out.println("Êý¾Ý¿âÁ¬½Ó³É¹¦£¡");
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			System.out.println("Êý¾Ý¿âÁ¬½ÓÊ§°Ü£¡");
+			System.out.println("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			
 			
 			

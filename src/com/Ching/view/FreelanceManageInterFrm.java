@@ -49,7 +49,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 	private JTextArea FreelanceAddrTxt;
 
 	/**
-	 * Launch the application.
+	 * Launch the application .
 	 */
 	public static void main(String[] args) {
 		EventQueue.invokeLater(new Runnable() {
@@ -83,7 +83,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		s_FreelanceTypeTxt.setColumns(10);
 		
 		
-		//²éÑ¯°´Å¥
+		//ï¿½ï¿½Ñ¯ï¿½ï¿½Å¥
 		JButton btnNewButton = new JButton("\u67E5\u8BE2");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -151,7 +151,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		
 		FreelanceAddrTxt = new JTextArea();
 		
-		//ÐÞ¸Ä°´Å¥
+		//ï¿½Þ¸Ä°ï¿½Å¥
 		JButton btnNewButton_1 = new JButton("\u4FEE\u6539");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -162,7 +162,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		btnNewButton_1.setIcon(new ImageIcon(FreelanceManageInterFrm.class.getResource("/images/\u4FEE\u6539.png")));
 		
 		
-		//É¾³ý°´Å¥
+		//É¾ï¿½ï¿½ï¿½ï¿½Å¥
 		JButton btnNewButton_2 = new JButton("\u5220\u9664");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -233,7 +233,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		panel.setLayout(gl_panel);
 		
 		
-		//±íµ¥µã»÷
+		//ï¿½ï¿½ï¿½ï¿½ï¿½
 		FreelanceTable = new JTable();
 		FreelanceTable.addMouseListener(new MouseAdapter() {
 			@Override
@@ -269,15 +269,15 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 	}
 	
 	
-	//É¾³ýÊÂ¼þ
+	//É¾ï¿½ï¿½ï¿½Â¼ï¿½
 	protected void FreelanceDeleteActionEvent() {
 		// TODO Auto-generated method stub
 		String Free_Id =FreelanceIdTxt.getText();
 		if (StringUtil.isEmpty(Free_Id)) {
-			JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÐèÒªÉ¾³ýµÄ¼ÇÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ä¼ï¿½Â¼ï¿½ï¿½");
 			return;
 		}
-		int n=JOptionPane.showConfirmDialog(null, "È·¶¨ÒªÉ¾³ý¸Ã¼ÇÂ¼Âð£¿");
+		int n=JOptionPane.showConfirmDialog(null, "È·ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ã¼ï¿½Â¼ï¿½ï¿½");
 		if (n==0) {
 			Connection con=null;
 			try {
@@ -285,12 +285,12 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 				int deleteNum=    freelanceDao.delete(con, Free_Id);
 				
 				if (deleteNum==1) {
-					JOptionPane.showMessageDialog(null, "É¾³ý³É¹¦£¡");
+					JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 					this.resetValue();
 					this.fillTable(new Freelance());
 					
 				}else {
-					JOptionPane.showMessageDialog(null, "É¾³ýÊ§°Ü£¡");
+					JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 					
 				}
 				
@@ -298,7 +298,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
-				JOptionPane.showMessageDialog(null, "É¾³ýÊ§°Ü£¡");
+				JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			}finally {
 				try {
 					dbUtil.closeCon(con);
@@ -312,7 +312,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		}
 	}
 
-	//ÐÞ¸ÄÊÂ¼þ
+	//ï¿½Þ¸ï¿½ï¿½Â¼ï¿½
 	private void FreelanceUpdateActionEvent() {
 		// TODO Auto-generated method stub
 		
@@ -323,27 +323,27 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		String Free_Addr =FreelanceAddrTxt.getText();
 		
 		if (StringUtil.isEmpty(Free_Id)) {
-			JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÐèÒªÐÞ¸ÄµÄ¼ÇÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸ÄµÄ¼ï¿½Â¼ï¿½ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Free_Type)) {
-			JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßÀà±ð²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Free_Name)) {
-			JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßÐÕÃû²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Free_Phone)) {
-			JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßµç»°²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ßµç»°ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Free_Addr)) {
-			JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßµØÖ·²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ßµï¿½Ö·ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
@@ -356,18 +356,18 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 			int modifyNumber=  freelanceDao.update(con, freelance);
 			
 			if (modifyNumber==1) {
-				JOptionPane.showMessageDialog(null, "ÐÞ¸Ä³É¹¦£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Þ¸Ä³É¹ï¿½ï¿½ï¿½");
 				this.resetValue();
 				this.fillTable(new Freelance());
 				
 			}else {
-				JOptionPane.showMessageDialog(null, "ÐÞ¸ÄÊ§°Ü£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
 			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "ÐÞ¸ÄÊ§°Ü£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
 		}finally {
 			try {
 				dbUtil.closeCon(con);
@@ -381,7 +381,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//±í¸ñµã»÷ÊÂ¼þ
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 	private void FreelanceTableMousePressed(MouseEvent evt) {
 		// TODO Auto-generated method stub
 		
@@ -395,7 +395,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//²éÑ¯·½·¨
+	//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½
 	private void FreelanceSearchActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
 		String s_Free_Type=this.s_FreelanceTypeTxt.getText(); 
@@ -404,11 +404,11 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		this.fillTable(freelance);
 	}
 
-	//³õÊ¼»¯±í¸ñ
+	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	private void fillTable(Freelance freelance) {
 		DefaultTableModel dtm=(DefaultTableModel)FreelanceTable.getModel();
-		dtm.setRowCount(0);//ÐÐÊýÉèÖÃÎª0
+		dtm.setRowCount(0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0
 		Connection con = null;
 		try {
 			con=dbUtil.getCon();
@@ -440,7 +440,7 @@ public class FreelanceManageInterFrm extends JInternalFrame {
 		
 	}
 	
-	//ÖØÖÃ±íµ¥
+	//ï¿½ï¿½ï¿½Ã±ï¿½
 		private void resetValue() {
 			this.FreelanceNameTxt.setText("");
 			this.FreelancePhoneIxt.setText("");

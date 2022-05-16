@@ -10,19 +10,19 @@ import com.Ching.model.Schedule;
 
 public class ProjectDao {
 
-	//添加
+	//???
 	public int add(Connection con,Project project) throws Exception{
+
 		
-		
-		//sql语句
-		//String sql_1="select * from freelance where Free_Id=?";//查询编号是否存在
+		//sql???
+		//String sql_1="select * from freelance where Free_Id=?";//????????????
 		//PreparedStatement pstmt1 = con.prepareStatement(sql_1);
 		
 		//pstmt1.setString(1, freelance.getFree_Id());
-		//ResultSet rs1 = pstmt1.executeQuery();//查询结果	
+		//ResultSet rs1 = pstmt1.executeQuery();//??????	
 		
 			
-		String sql_2 = "insert into project values(?,?,?,?,?)";//插入语句
+		String sql_2 = "insert into project values(?,?,?,?,?)";//???????
 		PreparedStatement pstmt2 = con.prepareStatement(sql_2);
 		
 		pstmt2.setString(1, project.getPro_Id());
@@ -36,7 +36,7 @@ public class ProjectDao {
 		
 	}
 	
-	//查询
+	//???
 			public ResultSet list(Connection con,Project project)throws Exception {
 				StringBuffer sb = new StringBuffer("select * from project");
 				
@@ -51,7 +51,7 @@ public class ProjectDao {
 			}
 			
 			
-			//删除
+			//???
 			public int delete(Connection con,String Pro_Id) throws Exception{
 				String sql="delete from project where Pro_Id=?";
 						PreparedStatement pstm=con.prepareStatement(sql);
@@ -62,7 +62,7 @@ public class ProjectDao {
 		
 		
 		
-		//修改
+		//???
 		public int update(Connection con,Project project)throws Exception {
 			String sql="update project set Pro_Id=?,Pro_Time=?,Pro_Free_Id=?,Pro_Con_Id=?,Pro_Content=? where Pro_Id=?";
 			PreparedStatement pstm=con.prepareStatement(sql);

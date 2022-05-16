@@ -79,7 +79,7 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 		
 		ConsumerAddrTxt = new JTextArea();
 		
-		//Ìí¼ÓÊÂ¼þ
+		//ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 		JButton btnNewButton = new JButton("\u6DFB\u52A0");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -179,13 +179,13 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 		);
 		getContentPane().setLayout(groupLayout);
 		
-		//ÉèÖÃÎÄ±¾Óò±ß¿ò
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ß¿ï¿½
 		ConsumerAddrTxt.setBorder(new LineBorder(new java.awt.Color(127,157,185),1,false));
 
 	}
 	
 	
-	//×ÔÓÉÖ°ÒµÕßÌí¼ÓÊÂ¼þ
+	//ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 	private void ConsumerAddActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
 		
@@ -199,29 +199,29 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 	    String Consumer_Id    = this.ConsumerIdTxt.getText() ;
 		
 	    if (StringUtil.isEmpty(Consumer_Id)) {
-	    	JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕß±àºÅ²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ß±ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    if (StringUtil.isEmpty(Consumer_Type)) {
-	    	JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßÀà±ð²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    
 
 	    if (StringUtil.isEmpty(Consumer_Name)) {
-	    	JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßÐÕÃû²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    if (StringUtil.isEmpty(Consumer_Phone)) {
-	    	JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßÁªÏµµç»°²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½Ïµï¿½ç»°ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    if (StringUtil.isEmpty(Consumer_Addr)) {
-	    	JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕßµØÖ·²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ßµï¿½Ö·ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
@@ -235,10 +235,10 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 	    	con=dbUtil.getCon();
 	    	int n=consumerDao.add(con,consumer);
 	    	if (n==1) {
-				JOptionPane.showMessageDialog(null, "Ìí¼Ó³É¹¦£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
 				resetValue();
 			}else {
-				JOptionPane.showMessageDialog(null, "Ìí¼ÓÊ§°Ü£¡ÆÕÍ¨ÓÃ»§±àºÅÒÑ´æÔÚ£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½");
 			}
 	    	
 	    	
@@ -246,7 +246,7 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 	    }catch (Exception e) {
 			// TODO: handle exception
 	    	e.printStackTrace();
-	    	JOptionPane.showMessageDialog(null, "Ìí¼ÓÊ§°Ü£¡ÆÕÍ¨ÓÃ»§±àºÅÒÑ´æÔÚ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½");
 		}finally {
 			try {
 				dbUtil.closeCon(con);
@@ -262,7 +262,7 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 	    
 	}
 
-	//ÖØÖÃÊÂ¼þ´¦Àí
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	private void resetValueActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
 		this.resetValue();
@@ -270,7 +270,7 @@ public class ConsumerAddInterFrm extends JInternalFrame {
 
 	
 	
-	//ÖØÖÃ±íµ¥
+	//ï¿½ï¿½ï¿½Ã±ï¿½
 	private void resetValue() {
 		this.ConsumerNameTxt.setText("");
 		this.ConsumerPhoneTxt.setText("");

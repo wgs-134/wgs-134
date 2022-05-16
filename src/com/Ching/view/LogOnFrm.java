@@ -77,15 +77,15 @@ public class LogOnFrm extends JFrame {
 		table_1 = new JTable();
 		
 		JLabel lblNewLabel = new JLabel("\u51FA\u79DF\u670D\u52A1\u7BA1\u7406\u7CFB\u7EDF");
-		lblNewLabel.setFont(new Font("ËÎÌå", Font.PLAIN, 28));
+		lblNewLabel.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.PLAIN, 28));
 		lblNewLabel.setIcon(new ImageIcon(LogOnFrm.class.getResource("/images/\u4FE1\u606F (4).png")));
 		
 		JLabel lblNewLabel_1 = new JLabel("\u7528\u6237\u540D\uFF1A");
-		lblNewLabel_1.setFont(new Font("ËÎÌå", Font.BOLD, 15));
+		lblNewLabel_1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 15));
 		lblNewLabel_1.setIcon(new ImageIcon(LogOnFrm.class.getResource("/images/\u59D3\u540D \u7528\u6237\u540D \u6635\u79F0.png")));
 		
 		JLabel lblNewLabel_2 = new JLabel("\u5BC6  \u7801\uFF1A");
-		lblNewLabel_2.setFont(new Font("ËÎÌå", Font.BOLD, 15));
+		lblNewLabel_2.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.BOLD, 15));
 		lblNewLabel_2.setIcon(new ImageIcon(LogOnFrm.class.getResource("/images/\u5BC6\u7801 (1).png")));
 		
 		passwordTxt = new JPasswordField();
@@ -96,19 +96,19 @@ public class LogOnFrm extends JFrame {
 		JButton btnNewButton = new JButton("\u767B\u5F55");
 		btnNewButton.addActionListener(new ActionListener() {
 			
-			//µÇÂ¼°´Å¥
+			//ï¿½ï¿½Â¼ï¿½ï¿½Å¥
 			public void actionPerformed(ActionEvent e) {
 				loginActionPerformed(e);
 				
 			}
 		});
-		btnNewButton.setFont(new Font("ËÎÌå", Font.PLAIN, 12));
+		btnNewButton.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.PLAIN, 12));
 		btnNewButton.setBackground(SystemColor.activeCaption);
 		
 		JButton btnNewButton_1 = new JButton("\u91CD\u7F6E");
 		btnNewButton_1.setBackground(SystemColor.activeCaption);
 		btnNewButton_1.addActionListener(new ActionListener() {
-			//ÖØÖÃ·½·¨
+			//ï¿½ï¿½ï¿½Ã·ï¿½ï¿½ï¿½
 			public void actionPerformed(ActionEvent e) {
 				resetValueActionPerformed(e);
 				
@@ -116,7 +116,7 @@ public class LogOnFrm extends JFrame {
 				
 			}
 		});
-		btnNewButton_1.setFont(new Font("ËÎÌå", Font.PLAIN, 12));
+		btnNewButton_1.setFont(new Font("ï¿½ï¿½ï¿½ï¿½", Font.PLAIN, 12));
 		GroupLayout gl_contentPane = new GroupLayout(contentPane);
 		gl_contentPane.setHorizontalGroup(
 			gl_contentPane.createParallelGroup(Alignment.TRAILING)
@@ -180,25 +180,25 @@ public class LogOnFrm extends JFrame {
 					.addContainerGap())
 		);
 		contentPane.setLayout(gl_contentPane);
-		//ÉèÖÃ´°Ìå¾ÓÖÐ
+		//ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		this.setLocationRelativeTo(null);
 	}
-	//µÇÂ¼ÊÂ¼þ´¦Àí
+	//ï¿½ï¿½Â¼ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 private void loginActionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		String User_Name = this.User_NameTxt.getText();
 		String password = new String(this.passwordTxt.getPassword());
 		if (StringUtil.isEmpty(User_Name)) {
-			JOptionPane.showMessageDialog(null, "ÓÃ»§Ãû²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(password)) {
-			JOptionPane.showMessageDialog(null, "ÃÜÂë²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ë²»ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
-	//Á¬½ÓÊý¾Ý¿â
+	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿ï¿½
 		User user = new User(User_Name,password);
 		
 		Connection con = null;
@@ -206,11 +206,11 @@ private void loginActionPerformed(ActionEvent e) {
 			con = dbUtil.getCon();
 			User currentUser= userDao.login(con, user);
 			if (currentUser!=null) {
-				JOptionPane.showMessageDialog(null, "µÇÂ¼³É¹¦£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½ï¿½Â¼ï¿½É¹ï¿½ï¿½ï¿½");
 				dispose();
 				new MainFrm().setVisible(true);
 			}else {
-				JOptionPane.showMessageDialog(null, "ÓÃ»§Ãû»òÃÜÂë´íÎó£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½");
 			}
 					
 		} catch (Exception e1) {
@@ -227,7 +227,7 @@ private void loginActionPerformed(ActionEvent e) {
 		
 	}
 
-//ÖØÖÃÊÂ¼þ´¦Àí
+//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	protected void resetValueActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
 		this.User_NameTxt.setText("");

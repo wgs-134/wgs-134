@@ -2,7 +2,7 @@ package com.Ching.model;
 
 
 
-//自由职业者实体
+//锟斤拷锟斤拷职业锟斤拷实锟斤拷
 public class Freelance {
 
 	
@@ -11,7 +11,7 @@ public class Freelance {
 	private String  Free_Name;
 	private String  Free_Phone;
 	private String  Free_Addr;
-	
+
 	
 	
 	public Freelance() {

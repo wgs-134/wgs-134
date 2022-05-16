@@ -8,24 +8,24 @@ import com.Ching.util.StringUtil;
 import java.sql.ResultSet;
 import java.sql.PreparedStatement;
 
-//自由职业者Dao类
+//????????Dao??
 public class FreelanceDao {
 
 
 	
-	//添加
+	//???
 	public int add(Connection con,Freelance freelance) throws Exception{
 		
 		
-		//sql语句
-		//String sql_1="select * from freelance where Free_Id=?";//查询编号是否存在
+		//sql???
+		//String sql_1="select * from freelance where Free_Id=?";//????????????
 		//PreparedStatement pstmt1 = con.prepareStatement(sql_1);
 		
 		//pstmt1.setString(1, freelance.getFree_Id());
-		//ResultSet rs1 = pstmt1.executeQuery();//查询结果	
+		//ResultSet rs1 = pstmt1.executeQuery();//??????	
 		
 			
-		String sql_2 = "insert into freelance values(?,?,?,?,?)";//插入语句
+		String sql_2 = "insert into freelance values(?,?,?,?,?)";//???????
 		PreparedStatement pstmt2 = con.prepareStatement(sql_2);
 		
 		pstmt2.setString(1, freelance.getFree_Id());
@@ -40,7 +40,7 @@ public class FreelanceDao {
 	}
 	
 	
-	//查询
+	//???
 	public ResultSet list(Connection con,Freelance freelance)throws Exception {
 		StringBuffer sb = new StringBuffer("select * from freelance");
 		
@@ -54,7 +54,7 @@ public class FreelanceDao {
 		return pstmt2.executeQuery();
 	}
 	
-	//删除
+	//???
 		public int delete(Connection con,String Free_Id) throws Exception{
 			String sql="delete from freelance where Free_Id=?";
 					PreparedStatement pstm=con.prepareStatement(sql);
@@ -65,7 +65,7 @@ public class FreelanceDao {
 	
 	
 	
-	//修改
+	//???
 	public int update(Connection con,Freelance freelance)throws Exception {
 		String sql="update freelance set Free_Id=?,Free_Type=?,Free_Name=?,Free_Phone=?,Free_Addr=? where Free_Id=?";
 		PreparedStatement pstm=con.prepareStatement(sql);

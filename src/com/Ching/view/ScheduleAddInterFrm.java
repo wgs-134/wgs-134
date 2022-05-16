@@ -140,7 +140,7 @@ public class ScheduleAddInterFrm extends JInternalFrame {
 
 	}
 
-//ÏîÄ¿Ìí¼ÓÊÂ¼þ
+//ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 private void ScheduleAddActionPerformed(ActionEvent evt) {
 // TODO Auto-generated method stub
 
@@ -153,19 +153,19 @@ String Sch_Free_Id  = this.ScheduleFreeIdTxt.getText();
 
 
 if (StringUtil.isEmpty(Sch_Id)) {
-	JOptionPane.showMessageDialog(null, "Ê±¼ä±í±àºÅ²»ÄÜÎª¿Õ£¡");
+	JOptionPane.showMessageDialog(null, "Ê±ï¿½ï¿½ï¿½ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 	return;
 }
 
 if (StringUtil.isEmpty(Sch_Time)) {
-	JOptionPane.showMessageDialog(null, "Ê±¼ä±íÊ±¼ä²»ÄÜÎª¿Õ£¡");
+	JOptionPane.showMessageDialog(null, "Ê±ï¿½ï¿½ï¿½Ê±ï¿½ä²»ï¿½ï¿½Îªï¿½Õ£ï¿½");
 	return;
 }
 
 
 
 if (StringUtil.isEmpty(Sch_Free_Id )) {
-	JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕß±àºÅ²»ÄÜÎª¿Õ£¡");
+	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ß±ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 	return;
 }
 
@@ -180,10 +180,10 @@ try {
 	con=dbUtil.getCon();
 	int n=scheduleDao.add(con,schedule);
 	if (n==1) {
-		JOptionPane.showMessageDialog(null, "Ìí¼Ó³É¹¦£¡");
+		JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
 		resetValue();
 	}else {
-		JOptionPane.showMessageDialog(null, "Ìí¼ÓÊ§°Ü£¡Ê±¼ä±í±àºÅÒÑ´æÔÚ£¡");
+		JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½");
 	}
 	
 	
@@ -191,7 +191,7 @@ try {
 }catch (Exception e) {
 	// TODO: handle exception
 	e.printStackTrace();
-	JOptionPane.showMessageDialog(null, "Ìí¼ÓÊ§°Ü£¡Ê±¼ä±í±àºÅÒÑ´æÔÚ£¡");
+	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½");
 }finally {
 	try {
 		dbUtil.closeCon(con);
@@ -209,7 +209,7 @@ try {
 
 
 
-	//ÖØÖÃÊÂ¼þ´¦Àí
+	//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	private void resetValueActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
 		this.resetValue();
@@ -217,7 +217,7 @@ try {
 
 	
 	
-	//ÖØÖÃ±íµ¥
+	//ï¿½ï¿½ï¿½Ã±ï¿½
 	private void resetValue() {
 		this.ScheduleIdTxt.setText("");
 		this.ScheduleTimeTxt.setText("");

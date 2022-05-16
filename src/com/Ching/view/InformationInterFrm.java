@@ -88,11 +88,11 @@ public class InformationInterFrm extends JInternalFrame {
 		this.fillTable(new Project());
 	}
 	
-	//³õÊ¼»¯±í¸ñ
+	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	private void fillTable(Project project) {
 		DefaultTableModel dtm=(DefaultTableModel)InformationTable.getModel();
-		dtm.setRowCount(0);//ÐÐÊýÉèÖÃÎª0
+		dtm.setRowCount(0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0
 		Connection con = null;
 		try {
 			con=dbUtil.getCon();

@@ -82,7 +82,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		s_ProjectTypeTxt = new JTextField();
 		s_ProjectTypeTxt.setColumns(10);
 		
-		//²éÑ¯°´Å¥
+		//ï¿½ï¿½Ñ¯ï¿½ï¿½Å¥
 		JButton btnNewButton = new JButton("\u67E5\u8BE2");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -153,7 +153,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		 ProjectContentTxt = new JTextArea();
 		ProjectContentTxt.setBackground(SystemColor.menu);
 		
-		//ÐÞ¸Ä°´Å¥
+		//ï¿½Þ¸Ä°ï¿½Å¥
 		JButton btnNewButton_1 = new JButton("\u4FEE\u6539");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -163,7 +163,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		});
 		btnNewButton_1.setIcon(new ImageIcon(ProjectManageInterFrm.class.getResource("/images/\u4FEE\u6539.png")));
 		
-		//É¾³ý°´Å¥
+		//É¾ï¿½ï¿½ï¿½ï¿½Å¥
 		JButton btnNewButton_2 = new JButton("\u5220\u9664");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -239,7 +239,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		);
 		panel.setLayout(gl_panel);
 		
-		//µã»÷ÊÂ¼þ
+		//ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 		ProjectTable = new JTable();
 		ProjectTable.addMouseListener(new MouseAdapter() {
 			@Override
@@ -276,7 +276,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 	
 	
 	
-	//µã»÷±íµ¥
+	//ï¿½ï¿½ï¿½ï¿½ï¿½
 	private void ProjectTableMousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -289,15 +289,15 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//É¾³ýÊÂ¼þ
+	//É¾ï¿½ï¿½ï¿½Â¼ï¿½
 	private void ProjectDeleteActionEvent() {
 		// TODO Auto-generated method stub
 		String Pro_Id =ProjectIdTxt.getText();
 		if (StringUtil.isEmpty(Pro_Id)) {
-			JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÐèÒªÉ¾³ýµÄ¼ÇÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ä¼ï¿½Â¼ï¿½ï¿½");
 			return;
 		}
-		int n=JOptionPane.showConfirmDialog(null, "È·¶¨ÒªÉ¾³ý¸Ã¼ÇÂ¼Âð£¿");
+		int n=JOptionPane.showConfirmDialog(null, "È·ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ã¼ï¿½Â¼ï¿½ï¿½");
 		if (n==0) {
 			Connection con=null;
 			try {
@@ -305,12 +305,12 @@ public class ProjectManageInterFrm extends JInternalFrame {
 				int deleteNum=    projectDao.delete(con, Pro_Id);
 				
 				if (deleteNum==1) {
-					JOptionPane.showMessageDialog(null, "É¾³ý³É¹¦£¡");
+					JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 					this.resetValue();
 					this.fillTable(new Project());
 					
 				}else {
-					JOptionPane.showMessageDialog(null, "É¾³ýÊ§°Ü£¡");
+					JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 					
 				}
 				
@@ -318,7 +318,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
-				JOptionPane.showMessageDialog(null, "É¾³ýÊ§°Ü£¡");
+				JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			}finally {
 				try {
 					dbUtil.closeCon(con);
@@ -335,7 +335,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 	}
 
 	
-	//ÐÞ¸ÄÊÂ¼þ
+	//ï¿½Þ¸ï¿½ï¿½Â¼ï¿½
 	private void ProjectUpdateActionEvent() {
 		// TODO Auto-generated method stub
 		String Pro_Id =ProjectIdTxt.getText();
@@ -346,28 +346,28 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		
 		
 		if (StringUtil.isEmpty(Pro_Id)) {
-			JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÐèÒªÐÞ¸ÄµÄ¼ÇÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸ÄµÄ¼ï¿½Â¼ï¿½ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Pro_Type)) {
-			JOptionPane.showMessageDialog(null, "ÏîÄ¿Àà±ð²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Pro_Free_Id)) {
-			JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕß±àºÅ²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ß±ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		
 		if (StringUtil.isEmpty(Pro_Con_Id)) {
-			JOptionPane.showMessageDialog(null, "ÆÕÍ¨ÓÃ»§±àºÅ²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Pro_Content)) {
-			JOptionPane.showMessageDialog(null, "ÏîÄ¿ÄÚÈÝ²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
@@ -384,18 +384,18 @@ public class ProjectManageInterFrm extends JInternalFrame {
 			int modifyNumber=  projectDao.update(con, project);
 			
 			if (modifyNumber==1) {
-				JOptionPane.showMessageDialog(null, "ÐÞ¸Ä³É¹¦£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Þ¸Ä³É¹ï¿½ï¿½ï¿½");
 				this.resetValue();
 				this.fillTable(new Project());
 				
 			}else {
-				JOptionPane.showMessageDialog(null, "ÐÞ¸ÄÊ§°Ü£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
 			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "ÐÞ¸ÄÊ§°Ü£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
 		}finally {
 			try {
 				dbUtil.closeCon(con);
@@ -409,7 +409,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//²éÑ¯ÊÂ¼þ
+	//ï¿½ï¿½Ñ¯ï¿½Â¼ï¿½
 	private void ProjectSearchActionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -425,11 +425,11 @@ public class ProjectManageInterFrm extends JInternalFrame {
 	}
 	
 	
-	//³õÊ¼»¯±í¸ñ
+	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 			private void fillTable(Project project) {
 				DefaultTableModel dtm=(DefaultTableModel)ProjectTable.getModel();
-				dtm.setRowCount(0);//ÐÐÊýÉèÖÃÎª0
+				dtm.setRowCount(0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0
 				Connection con = null;
 				try {
 					con=dbUtil.getCon();
@@ -461,7 +461,7 @@ public class ProjectManageInterFrm extends JInternalFrame {
 		
 			}
 
-			//ÖØÖÃ±íµ¥
+			//ï¿½ï¿½ï¿½Ã±ï¿½
 			private void resetValue() {
 				this.ProjectIdTxt.setText("");
 				this.ProjectFreeIdTxt.setText("");

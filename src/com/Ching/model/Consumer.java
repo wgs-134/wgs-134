@@ -8,7 +8,7 @@ public class Consumer {
 	private String  Con_Phone;
 	private String  Con_Addr;
 	
-		
+
 	
 	public Consumer(String con_Id, String con_Type, String con_Name, String con_Phone, String con_Addr) {
 		super();

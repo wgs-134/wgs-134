@@ -95,7 +95,7 @@ public class ProjectAddInterFrm extends JInternalFrame {
 		
 		JButton btnNewButton_1_1 = new JButton("\u91CD\u7F6E");
 		
-		//Ìí¼Ó°´Å¥
+		//ï¿½ï¿½Ó°ï¿½Å¥
 		JButton btnNewButton_3 = new JButton("\u6DFB\u52A0");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -198,12 +198,12 @@ public class ProjectAddInterFrm extends JInternalFrame {
 		);
 		getContentPane().setLayout(groupLayout);
 
-		//ÉèÖÃÎÄ±¾Óò±ß¿ò
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ß¿ï¿½
 				ProjectContentTxt.setBorder(new LineBorder(new java.awt.Color(127,157,185),1,false));
 
 			}
 	
-	//ÏîÄ¿Ìí¼ÓÊÂ¼þ
+	//ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Â¼ï¿½
 	private void ProjectAddActionPerformed(ActionEvent evt) {
 		// TODO Auto-generated method stub
 		
@@ -217,29 +217,29 @@ public class ProjectAddInterFrm extends JInternalFrame {
 	    String Project_Con_Id   = this.ProjectConIdTxt.getText() ;
 		
 	    if (StringUtil.isEmpty(Project_Id)) {
-	    	JOptionPane.showMessageDialog(null, "ÏîÄ¿±àºÅ²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿ï¿½ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    if (StringUtil.isEmpty(Project_Time)) {
-	    	JOptionPane.showMessageDialog(null, "ÏîÄ¿Ê±¼ä²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿Ê±ï¿½ä²»ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    
 
 	    if (StringUtil.isEmpty(Project_Free_Id )) {
-	    	JOptionPane.showMessageDialog(null, "ÏîÄ¿²ÎÓë×ÔÓÉÖ°ÒµÕß±àºÅ²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ß±ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    if (StringUtil.isEmpty(Project_Con_Id)) {
-	    	JOptionPane.showMessageDialog(null, "ÏîÄ¿²ÎÓëÆÕÍ¨ÓÃ»§±àºÅ²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
 	    if (StringUtil.isEmpty(Project_Content)) {
-	    	JOptionPane.showMessageDialog(null, "ÏîÄ¿ÄÚÈÝ²»ÄÜÎª¿Õ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 	    
@@ -253,10 +253,10 @@ public class ProjectAddInterFrm extends JInternalFrame {
 	    	con=dbUtil.getCon();
 	    	int n=projectDao.add(con,project);
 	    	if (n==1) {
-				JOptionPane.showMessageDialog(null, "Ìí¼Ó³É¹¦£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ó³É¹ï¿½ï¿½ï¿½");
 				resetValue();
 			}else {
-				JOptionPane.showMessageDialog(null, "Ìí¼ÓÊ§°Ü£¡ÏîÄ¿±àºÅÒÑ´æÔÚ£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½");
 			}
 	    	
 	    	
@@ -264,7 +264,7 @@ public class ProjectAddInterFrm extends JInternalFrame {
 	    }catch (Exception e) {
 			// TODO: handle exception
 	    	e.printStackTrace();
-	    	JOptionPane.showMessageDialog(null, "Ìí¼ÓÊ§°Ü£¡ÏîÄ¿±àºÅÒÑ´æÔÚ£¡");
+	    	JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½ï¿½ï¿½Ä¿ï¿½ï¿½ï¿½ï¿½Ñ´ï¿½ï¿½Ú£ï¿½");
 		}finally {
 			try {
 				dbUtil.closeCon(con);
@@ -282,7 +282,7 @@ public class ProjectAddInterFrm extends JInternalFrame {
 	
 	
 
-			//ÖØÖÃÊÂ¼þ´¦Àí
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½
 			private void resetValueActionPerformed(ActionEvent evt) {
 				// TODO Auto-generated method stub
 				this.resetValue();
@@ -290,7 +290,7 @@ public class ProjectAddInterFrm extends JInternalFrame {
 
 			
 			
-			//ÖØÖÃ±íµ¥
+			//ï¿½ï¿½ï¿½Ã±ï¿½
 			private void resetValue() {
 				this.ProjectIdTxt.setText("");
 				this.ProjectTimeTxt.setText("");

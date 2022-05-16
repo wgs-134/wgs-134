@@ -1,10 +1,10 @@
 package com.Ching.util;
 
-//×Ö´®¹¤¾ßÀà
+//ï¿½Ö´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 public class StringUtil {
-//ÅÐ¿Õ
+//ï¿½Ð¿ï¿½
 public static boolean isEmpty(String str) {
-	//trimÊÇ°ÑÇ°ºó¿Õ¸ñÈ¥µô
+	//trimï¿½Ç°ï¿½Ç°ï¿½ï¿½Õ¸ï¿½È¥ï¿½ï¿½
 	if (str==null||"".equals(str.trim())) {
 		return true;
 	}
@@ -13,7 +13,7 @@ public static boolean isEmpty(String str) {
 	}
 }	
 
-//ÅÐ·Ç¿Õ
+//ï¿½Ð·Ç¿ï¿½
 	public static boolean isNotEmpty(String str) {
 		if (str==null&&"".equals(str.trim())) {
 			return true;

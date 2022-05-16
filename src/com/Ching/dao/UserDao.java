@@ -6,24 +6,23 @@ import com.Ching.model.User;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
-import javax.naming.spi.DirStateFactory.Result;
 
 
 
 
 public class UserDao {
-	//µÇÂ½ÑéÖ¤
+	//ï¿½ï¿½Â½ï¿½ï¿½Ö¤
 	public User login(Connection con,User user)throws Exception{
 		User resultUser = null;
 		
-		//sqlÓï¾ä£º²éÑ¯¶ÔÓ¦ÓÃ»§
+		//sqlï¿½ï¿½ä£ºï¿½ï¿½Ñ¯ï¿½ï¿½Ó¦ï¿½Ã»ï¿½
 		String sql = "select * from user where User_Name=?and password=?"; 
 		PreparedStatement pstmt = con.prepareStatement(sql); 
 		
-		pstmt.setString(1, user.getUser_Name());//½ÓÊÜ½çÃæ´«¹ıÀ´µÄÓÃ»§Ãû
-		pstmt.setString(2, user.getPassword());//½ÓÊÜ½çÃæ´«¹ıÀ´µÄÃÜÂë
+		pstmt.setString(1, user.getUser_Name());//ï¿½ï¿½ï¿½Ü½ï¿½ï¿½æ´«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½
+		pstmt.setString(2, user.getPassword());//ï¿½ï¿½ï¿½Ü½ï¿½ï¿½æ´«ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		
-		ResultSet rs = pstmt.executeQuery();//²éÑ¯½á¹û
+		ResultSet rs = pstmt.executeQuery();//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½
 		if (rs.next()) {
 			resultUser = new User();
 			resultUser.setUser_Id(rs.getInt("User_Id"));

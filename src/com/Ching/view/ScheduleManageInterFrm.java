@@ -78,7 +78,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		s_ScheduleIdTxt = new JTextField();
 		s_ScheduleIdTxt.setColumns(10);
 		
-		//²éÑ¯°´Å¥
+		//ï¿½ï¿½Ñ¯ï¿½ï¿½Å¥
 		JButton btnNewButton = new JButton("\u67E5\u8BE2");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -142,7 +142,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		ScheduleFreeIdTxt = new JTextField();
 		ScheduleFreeIdTxt.setColumns(10);
 		
-		//ÐÞ¸Ä°´Å¥
+		//ï¿½Þ¸Ä°ï¿½Å¥
 		JButton btnNewButton_1 = new JButton("\u4FEE\u6539");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -152,7 +152,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		});
 		btnNewButton_1.setIcon(new ImageIcon(ScheduleManageInterFrm.class.getResource("/images/\u4FEE\u6539.png")));
 		
-		//É¾³ý°´Å¥
+		//É¾ï¿½ï¿½ï¿½ï¿½Å¥
 		JButton btnNewButton_2 = new JButton("\u5220\u9664");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -208,7 +208,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		panel.setLayout(gl_panel);
 		
 		
-		//µã»÷±íµ¥
+		//ï¿½ï¿½ï¿½ï¿½ï¿½
 		ScheduleTable = new JTable();
 		ScheduleTable.setBackground(new Color(0, 102, 255));
 		ScheduleTable.addMouseListener(new MouseAdapter() {
@@ -239,15 +239,15 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		this.fillTable(new Schedule());
 	}
 
-	//É¾³ýÊÂ¼þ
+	//É¾ï¿½ï¿½ï¿½Â¼ï¿½
 	private void ScheduleDeleteActionEvent() {
 		// TODO Auto-generated method stub
 		String Sch_Id =ScheduleIdTxt.getText();
 		if (StringUtil.isEmpty(Sch_Id)) {
-			JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÐèÒªÉ¾³ýµÄ¼ÇÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ä¼ï¿½Â¼ï¿½ï¿½");
 			return;
 		}
-		int n=JOptionPane.showConfirmDialog(null, "È·¶¨ÒªÉ¾³ý¸Ã¼ÇÂ¼Âð£¿");
+		int n=JOptionPane.showConfirmDialog(null, "È·ï¿½ï¿½ÒªÉ¾ï¿½ï¿½ï¿½Ã¼ï¿½Â¼ï¿½ï¿½");
 		if (n==0) {
 			Connection con=null;
 			try {
@@ -255,12 +255,12 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 				int deleteNum=    scheduleDao.delete(con, Sch_Id);
 				
 				if (deleteNum==1) {
-					JOptionPane.showMessageDialog(null, "É¾³ý³É¹¦£¡");
+					JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½ï¿½É¹ï¿½ï¿½ï¿½");
 					this.resetValue();
 					this.fillTable(new Schedule());
 					
 				}else {
-					JOptionPane.showMessageDialog(null, "É¾³ýÊ§°Ü£¡");
+					JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 					
 				}
 				
@@ -268,7 +268,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 			} catch (Exception e) {
 				// TODO: handle exception
 				e.printStackTrace();
-				JOptionPane.showMessageDialog(null, "É¾³ýÊ§°Ü£¡");
+				JOptionPane.showMessageDialog(null, "É¾ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 			}finally {
 				try {
 					dbUtil.closeCon(con);
@@ -284,7 +284,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//ÐÞ¸ÄÊÂ¼þ
+	//ï¿½Þ¸ï¿½ï¿½Â¼ï¿½
 	private void ScheduleUpdateActionEvent() {
 		// TODO Auto-generated method stub
 		String Sch_Id =ScheduleIdTxt.getText();
@@ -293,18 +293,18 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		
 		
 		if (StringUtil.isEmpty(Sch_Id)) {
-			JOptionPane.showMessageDialog(null, "ÇëÑ¡ÔñÐèÒªÐÞ¸ÄµÄ¼ÇÂ¼£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Òªï¿½Þ¸ÄµÄ¼ï¿½Â¼ï¿½ï¿½");
 			return;
 		}
 		
 		if (StringUtil.isEmpty(Sch_Free_Id)) {
-			JOptionPane.showMessageDialog(null, "×ÔÓÉÖ°ÒµÕß±àºÅ²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ß±ï¿½Å²ï¿½ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
 		
 		if (StringUtil.isEmpty(Sch_Time)) {
-			JOptionPane.showMessageDialog(null, "Ê±¼ä±íÊ±¼ä²»ÄÜÎª¿Õ£¡");
+			JOptionPane.showMessageDialog(null, "Ê±ï¿½ï¿½ï¿½Ê±ï¿½ä²»ï¿½ï¿½Îªï¿½Õ£ï¿½");
 			return;
 		}
 		
@@ -321,18 +321,18 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 			int modifyNumber=  scheduleDao.update(con, schedule);
 			
 			if (modifyNumber==1) {
-				JOptionPane.showMessageDialog(null, "ÐÞ¸Ä³É¹¦£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Þ¸Ä³É¹ï¿½ï¿½ï¿½");
 				this.resetValue();
 				this.fillTable(new Schedule());
 				
 			}else {
-				JOptionPane.showMessageDialog(null, "ÐÞ¸ÄÊ§°Ü£¡");
+				JOptionPane.showMessageDialog(null, "ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
 			}
 			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
-			JOptionPane.showMessageDialog(null, "ÐÞ¸ÄÊ§°Ü£¡");
+			JOptionPane.showMessageDialog(null, "ï¿½Þ¸ï¿½Ê§ï¿½Ü£ï¿½");
 		}finally {
 			try {
 				dbUtil.closeCon(con);
@@ -345,7 +345,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//µã»÷±íµ¥
+	//ï¿½ï¿½ï¿½ï¿½ï¿½
 	private void ScheduleTableMousePressed(MouseEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -359,7 +359,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		
 	}
 
-	//²éÑ¯ÊÂ¼þ
+	//ï¿½ï¿½Ñ¯ï¿½Â¼ï¿½
 	private void ScheduleSearchActionPerformed(ActionEvent e) {
 		// TODO Auto-generated method stub
 		
@@ -371,11 +371,11 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 		
 		
 	}
-	//³õÊ¼»¯±í¸ñ
+	//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½
 	
 	private void fillTable(Schedule schedule) {
 		DefaultTableModel dtm=(DefaultTableModel)ScheduleTable.getModel();
-		dtm.setRowCount(0);//ÐÐÊýÉèÖÃÎª0
+		dtm.setRowCount(0);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª0
 		Connection con = null;
 		try {
 			con=dbUtil.getCon();
@@ -408,7 +408,7 @@ public class ScheduleManageInterFrm extends JInternalFrame {
 	
 	
 		
-		//ÖØÖÃ±íµ¥
+		//ï¿½ï¿½ï¿½Ã±ï¿½
 			private void resetValue() {
 				this.ScheduleIdTxt.setText("");
 				this.ScheduleFreeIdTxt.setText("");

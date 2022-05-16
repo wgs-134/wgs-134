@@ -34,7 +34,7 @@ public class MainFrm extends JFrame
 	 */
 	public static void main(String[] args) 
 	{
-		EventQueue.invokeLater(new Runnable() 
+		EventQueue.invokeLater(new Runnable()
 		{
 			public void run() 
 			{
@@ -52,7 +52,7 @@ public class MainFrm extends JFrame
 	}
 
 	/**
-	 * ´°Ìå¿ò¼ÜÉè¼Æ
+	 * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	public MainFrm() 
 	{
@@ -74,7 +74,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_4.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u7528\u6237.png")));
 		mnNewMenu.add(mnNewMenu_4);
 		
-		//×ÔÓÉÖ°ÒµÕßÌí¼Ó
+		//ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½ï¿½ï¿½
 		JMenuItem mnNewMenu_9 = new JMenuItem("\u81EA\u7531\u804C\u4E1A\u8005\u6DFB\u52A0");
 		mnNewMenu_9.addActionListener(new ActionListener() 
 		{
@@ -88,7 +88,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_9.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u6DFB\u52A0.png")));
 		mnNewMenu_4.add(mnNewMenu_9);
 		
-		//×ÔÓÉÖ°ÒµÕßÉ¾³ý
+		//ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½É¾ï¿½ï¿½
 		JMenuItem mnNewMenu_10 = new JMenuItem("\u81EA\u7531\u804C\u4E1A\u8005\u5220\u9664");
 		mnNewMenu_10.addActionListener(new ActionListener()
 		{
@@ -102,7 +102,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_10.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u5220 \u9664 .png")));
 		mnNewMenu_4.add(mnNewMenu_10);
 		
-		//×ÔÓÉÖ°ÒµÕßÐÞ¸Ä
+		//ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ï¿½ï¿½Þ¸ï¿½
 		JMenuItem mnNewMenu_11 = new JMenuItem("\u81EA\u7531\u804C\u4E1A\u8005\u4FEE\u6539");
 		mnNewMenu_11.addActionListener(new ActionListener() 
 		{
@@ -116,7 +116,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_11.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u4FEE\u6539.png")));
 		mnNewMenu_4.add(mnNewMenu_11);
 		
-		//×ÔÓÉÖ°ÒµÕß²éÑ¯
+		//ï¿½ï¿½ï¿½ï¿½Ö°Òµï¿½ß²ï¿½Ñ¯
 		JMenuItem mnNewMenu_12 = new JMenuItem("\u81EA\u7531\u804C\u4E1A\u8005\u5206\u7C7B\u67E5\u8BE2");
 		mnNewMenu_12.addActionListener(new ActionListener()
 		{
@@ -135,7 +135,7 @@ public class MainFrm extends JFrame
 		mnNewMenu.add(mnNewMenu_5);
 		
 		
-		//ÆÕÍ¨ÓÃ»§Ìí¼Ó
+		//ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½ï¿½
 		JMenuItem mnNewMenu_13 = new JMenuItem("\u666E\u901A\u7528\u6237\u6DFB\u52A0");
 		mnNewMenu_13.addActionListener(new ActionListener()
 {
@@ -150,7 +150,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_5.add(mnNewMenu_13);
 		
 		
-		//ÆÕÍ¨ÓÃ»§É¾³ý
+		//ï¿½ï¿½Í¨ï¿½Ã»ï¿½É¾ï¿½ï¿½
 		JMenuItem mnNewMenu_14 = new JMenuItem("\u666E\u901A\u7528\u6237\u5220\u9664");
 		mnNewMenu_14.addActionListener(new ActionListener() 
 		{
@@ -165,7 +165,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_5.add(mnNewMenu_14);
 		
 		
-		//ÆÕÍ¨ÓÃ»§ÐÞ¸Ä
+		//ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½Þ¸ï¿½
 		JMenuItem mnNewMenu_15 = new JMenuItem("\u666E\u901A\u7528\u6237\u4FEE\u6539");
 		mnNewMenu_15.addActionListener(new ActionListener()
 		{
@@ -180,7 +180,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_5.add(mnNewMenu_15);
 		
 		
-		//ÆÕÍ¨ÓÃ»§²éÑ¯
+		//ï¿½ï¿½Í¨ï¿½Ã»ï¿½ï¿½ï¿½Ñ¯
 		JMenuItem mnNewMenu_16 = new JMenuItem("\u666E\u901A\u7528\u6237\u5206\u7C7B\u67E5\u8BE2");
 		mnNewMenu_16.addActionListener(new ActionListener() 
 		{
@@ -198,7 +198,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_6.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u9879\u76EE (1).png")));
 		mnNewMenu.add(mnNewMenu_6);
 		
-		//Ìí¼ÓÏîÄ¿
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 		JMenuItem mnNewMenu_18 = new JMenuItem("\u65F6\u95F4\u8868\u6DFB\u52A0");
 		mnNewMenu_18.addActionListener(new ActionListener() 
 		{
@@ -212,7 +212,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_18.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u6DFB\u52A0.png")));
 		mnNewMenu_6.add(mnNewMenu_18);
 		
-		//Ê±¼ä±íÉ¾³ý
+		//Ê±ï¿½ï¿½ï¿½É¾ï¿½ï¿½
 		JMenuItem mnNewMenu_19 = new JMenuItem("\u65F6\u95F4\u8868\u5220\u9664");
 		mnNewMenu_19.addActionListener(new ActionListener() 
 		{
@@ -226,7 +226,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_19.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u5220 \u9664 .png")));
 		mnNewMenu_6.add(mnNewMenu_19);
 		
-		//Ê±¼ä±íÐÞ¸Ä
+		//Ê±ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½
 		JMenuItem mnNewMenu_20 = new JMenuItem("\u65F6\u95F4\u8868\u4FEE\u6539");
 		mnNewMenu_20.addActionListener(new ActionListener() 
 		{
@@ -240,7 +240,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_20.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u4FEE\u6539.png")));
 		mnNewMenu_6.add(mnNewMenu_20);
 		
-		//Ê±¼ä±í²éÑ¯
+		//Ê±ï¿½ï¿½ï¿½ï¿½Ñ¯
 		JMenuItem mnNewMenu_17 = new JMenuItem("\u65F6\u95F4\u8868\u67E5\u8BE2");
 		mnNewMenu_17.addActionListener(new ActionListener() 
 		{
@@ -259,7 +259,7 @@ public class MainFrm extends JFrame
 		mnNewMenu.add(mnNewMenu_7);
 		
 		
-		//Ìí¼ÓÏîÄ¿
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¿
 		JMenuItem mnNewMenu_21 = new JMenuItem("\u9879\u76EE\u6DFB\u52A0");
 		mnNewMenu_21.addActionListener(new ActionListener() 
 		{
@@ -274,7 +274,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_7.add(mnNewMenu_21);
 		
 		
-		//ÏîÄ¿É¾³ý
+		//ï¿½ï¿½Ä¿É¾ï¿½ï¿½
 		JMenuItem mnNewMenu_22 = new JMenuItem("\u9879\u76EE\u5220\u9664");
 		mnNewMenu_22.addActionListener(new ActionListener() 
 		{
@@ -288,7 +288,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_22.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u5220 \u9664 .png")));
 		mnNewMenu_7.add(mnNewMenu_22);
 		
-		//ÏîÄ¿ÐÞ¸Ä
+		//ï¿½ï¿½Ä¿ï¿½Þ¸ï¿½
 		JMenuItem mnNewMenu_23 = new JMenuItem("\u9879\u76EE\u4FEE\u6539");
 		mnNewMenu_23.addActionListener(new ActionListener()
 		{
@@ -302,7 +302,7 @@ public class MainFrm extends JFrame
 		mnNewMenu_23.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u4FEE\u6539.png")));
 		mnNewMenu_7.add(mnNewMenu_23);
 		
-		//ÏîÄ¿²éÑ¯
+		//ï¿½ï¿½Ä¿ï¿½ï¿½Ñ¯
 		JMenuItem mnNewMenu_24 = new JMenuItem("\u9879\u76EE\u67E5\u8BE2");
 		mnNewMenu_24.addActionListener(new ActionListener() 
 		{
@@ -316,23 +316,23 @@ public class MainFrm extends JFrame
 		mnNewMenu_24.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u67E5\u8BE2.png")));
 		mnNewMenu_7.add(mnNewMenu_24);
 		
-		//°²È«ÍË³ö
+		//ï¿½ï¿½È«ï¿½Ë³ï¿½
 		JMenuItem mnNewMenu_8 = new JMenuItem("\u5B89\u5168\u9000\u51FA");
 		mnNewMenu_8.addActionListener(new ActionListener() 
 		{
 			public void actionPerformed(ActionEvent e) 
 			{
-				int result = JOptionPane.showConfirmDialog(null, "ÊÇ·ñÍË³öÏµÍ³£¿");
+				int result = JOptionPane.showConfirmDialog(null, "ï¿½Ç·ï¿½ï¿½Ë³ï¿½ÏµÍ³ï¿½ï¿½");
 				if(result==0) {	
 				//System.out.println(result);
-				dispose();//Ïú»Ù´°Ìå
+				dispose();//ï¿½ï¿½ï¿½Ù´ï¿½ï¿½ï¿½
 				}
 			}
 		});
 		mnNewMenu_8.setIcon(new ImageIcon(MainFrm.class.getResource("/images/\u9000\u51FA.png")));
 		mnNewMenu.add(mnNewMenu_8);
 		
-		//Éó¼ÆÐÅÏ¢
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		JMenu mnNewMenu_1 = new JMenu("\u67E5\u770B\u5BA1\u8BA1\u4FE1\u606F");
 		mnNewMenu_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -342,7 +342,7 @@ public class MainFrm extends JFrame
 		menuBar.add(mnNewMenu_1);
 		
 		
-		//Éó¼ÆÐÅÏ¢
+		//ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		JMenuItem mntmNewMenuItem_1 = new JMenuItem("\u67E5\u770B\u5BA1\u8BA1\u4FE1\u606F");
 		mntmNewMenuItem_1.addActionListener(new ActionListener()
 		{
@@ -361,7 +361,7 @@ public class MainFrm extends JFrame
 		menuBar.add(mnNewMenu_3);
 		
 		
-		//¹ØÓÚÎÒÃÇ
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		JMenuItem mntmNewMenuItem = new JMenuItem("\u5173\u4E8E\u6211\u4EEC");
 		mntmNewMenuItem.addActionListener(new ActionListener()
 		{
@@ -399,10 +399,10 @@ public class MainFrm extends JFrame
 		table.setLayout(gl_table);
 		
 	
-		//´°Ìå×î´ó»¯
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		this.setExtendedState(JFrame.MAXIMIZED_BOTH);
 		
-		//ÉèÖÃ´°Ìå¾ÓÖÐ
+		//ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		this.setLocationRelativeTo(null);
 		
 	}
